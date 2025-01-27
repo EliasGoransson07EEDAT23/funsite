@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DICE</title>
+    <link rel="stylesheet" href="holeio.css">
+</head>
+<body>
+  <div class="grid-container">
+    <header>
+        <a href="index.html"><p class="text">DICE</p></a>
+    </header>
+    <main>
+        <img width="100px" class="dice" src="tärning1.png" alt="">
+        <img width="100px" class="dice" src="tärning1.png" alt="">
+        <img width="100px" class="dice" src="tärning1.png" alt="">
+        <img width="100px" class="dice" src="tärning1.png" alt="">
+        <img width="100px" class="dice" src="tärning1.png" alt="">
+        <img width="100px" class="dice" src="tärning1.png" alt="">
+        <img width="100px" class="dice" src="tärning1.png" alt="">
+        <img width="100px" class="dice" src="tärning1.png" alt="">
+        <img width="100px" class="dice" src="tärning1.png" alt="">
+        <img width="100px" class="dice" src="tärning1.png" alt="">
+        <button onclick="update()"><p class="btn">Roll the Dice</p></button> 
+    </main>
+    <footer>
+        <p class="btn">MADE BY MUSHI_SAN</p>
+    </footer>
+  </div>
+    <script>
+        function update(){
+            let dices = document.getElementsByClassName("dice");
+
+            for(let i=0; i < dices.length; i++) {
+                let nr = Math.floor(Math.random() * 6+1);
+                dices[i].src = "tärning" + nr + ".png";
+
+            }
+        }
+    </script>
+</body>
+</html>
