@@ -3,10 +3,11 @@
     height:100vh;
 
     grid-template-columns: 6fr;
-    grid-template-rows: 1.2fr 6fr 1fr;
+    grid-template-rows: 1.2fr 0.6fr 6fr 1fr;
 
     grid-template-areas:
     "header"
+    "nav"
     "main"
     "footer"
 }
@@ -17,6 +18,13 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+nav{
+    grid-area: nav;
+    background-color: rgb(78, 77, 77);
+    display: flex;
+    justify-content: space-evenly;
+    
 }
 main{
     background-color:black;
@@ -33,22 +41,23 @@ footer{
     justify-content: center;
 }
 
-button{
+.knapp{
     padding: 12px 35px;
     background-color: rgb(233, 171, 233);
     cursor: pointer;
     transition-duration: 300ms;
 }
-button:hover{
+.knapp:hover{
     padding: 15px 35px;
     background-color: rgb(217, 150, 217);
 }
 
-img{
+.dice{
     transition-duration: 210ms;
+    cursor:crosshair;
 }
 
-img:hover{
+.dice:hover{
     width: 150px;
 }
 
@@ -67,7 +76,11 @@ img:hover{
 .btn{
     color: rgb(113, 55, 163);
     font-size: 20px;
-    
+}
+
+.webbtn{
+    padding: 15px 35px;
+    background-color:blueviolet;
 }
 
 @media (max-width:500px) {
