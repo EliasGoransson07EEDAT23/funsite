@@ -19,12 +19,19 @@
             <a href=""><button class="webbtn" ><p class="navbtn" >????</p></button></a>
         </nav>
         <main>
-            <video width="500px" controls>
-                <source src="catvideo1.mp4" type="video/mp4">
-            </video>
-            <video width="500px" controls>
-                <source src="catvideo2.mp4" type="video/mp4">
-            </video>
+            <video width="500px" controls class="catvid" src="catvideo1.mp4" type="video/mp4"></video>
+            <button class="webbtn" onclick="randomcat()">RANDOM CAT</button>
+
+            <script>
+                function randomcat(){
+                    let kitty = document.getElementsByClassName("catvid");
+
+                    for(let i=0; i < kitty.length; i++) {
+                        let nr = Math.floor(Math.random() * 8+1);
+                        kitty[i].src = "catvideo" + nr + ".mp4";
+                    }
+                }
+            </script>
         </main>
         <footer>
             <p class="fot">MADE BY MUSHI_SAN</p>
